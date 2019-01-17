@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <i class="fa fa-tasks"></i><a class="navbar-brand">Issue Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container mainEl">
+  <div class="row">
+    <div class="col-xs-2 col-md-2 col-lg-2"></div>
+    <div class="col-xs-8 col-md-8 col-lg-8">
+      <div class="main-heading"><span>Sign Up</span></div>
+      <div class="controles-container">
+        <form [formGroup]="form" (submit)="onSubmit()">
+          <div class="form-group">
+            <mat-form-field>
+              <input formControlName="firstName" matInput placeholder="First Name" [(ngModel)]="firstName" type="text">
+              <mat-error *ngIf="form.controls['firstName'].errors?.required">This field is mandatory</mat-error>
+              <mat-error *ngIf="form.controls['firstName'].errors?.minlength">Min 3 characters required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input formControlName="lastName" matInput placeholder="Last Name" [(ngModel)]="lastName" type="text">
+              <mat-error *ngIf="form.controls['lastName'].errors?.required">This field is mandatory</mat-error>
+              <mat-error *ngIf="form.controls['lastName'].errors?.minlength">Min 3 characters required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input formControlName="email" matInput placeholder="Email" [(ngModel)]="email" type="text">
+              <mat-error *ngIf="form.controls['email'].errors?.required">This field is mandatory</mat-error>
+              <mat-error *ngIf="form.controls['email'].errors?.email">Incorrect Email</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input formControlName="password" matInput placeholder="Password" [(ngModel)]="password" type="password">
+              <mat-error *ngIf="form.controls['password'].errors?.required">This field is mandatory</mat-error>
+              <mat-error *ngIf="form.controls['password'].errors?.minlength">Minimum 5 characters</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input formControlName="mobileNumber" matInput placeholder="Mobile Number" [(ngModel)]="mobileNumber"
+                type="text">
+            </mat-form-field>
+          </div>
+          <button mat-raised-button color="primary" [disabled]="form.invalid" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-xs-2 col-md-2 col-lg-2"></div>
+  </div>
+</div>

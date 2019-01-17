@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+/* font-family: 'Comfortaa', cursive; */
+
+.container {
+  font-family: 'Comfortaa', cursive;
+}
+
+.name-header {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  border-bottom: 3px solid #243C84;
+  margin: 6px;
+}
+
+.main-body {
+  background-color: #CCD4D4;
+}
+
+.basic-detail {
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.main-detail {
+  /* background-color: #D4D4D4; */
+  background-color: white;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.mat-form-field {
+  width: 100% !important;
+  position: relative;
+}
+
+.comments-section {
+  padding: 1rem;
+  margin: 8px;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 4px;
+
+}
+
+li {
+  border: 2px solid #283149;
+  border-radius: 2rem;
+}
+
+.nombre {
+  font-weight: bold;
+  border-bottom: 1px solid #283149;
+}

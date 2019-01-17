@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+.mat-form-field {
+  width: 100% !important;
+  position: relative;
+}
+
+.main-layout {
+  border: 2px solid grey;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 2rem;
+}
+
+.layout {
+  margin-top: 13%;
+}
+
+.container {
+  font-family: 'Comfortaa', cursive;
+}

@@ -1,0 +1,150 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <i class="fa fa-tasks"></i><a class="navbar-brand">Issue Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link">{{ userName }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"> Logout</i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <div toastContainer (click)="onNotification($event)"> </div>
+  <div class="row">
+    <div class="col-md-2 col-lg-2"></div>
+
+    <div class="col-md-8 col-lg-8 col-sm-12">
+      <div class="layout">
+        <div style="text-align:center"><span>
+            <h3>Issue Form</h3>
+          </span>
+        </div>
+        <div class="main-layout">
+          <i class="fa fa-arrow-left" style="font-size:2rem; color: green" [routerLink]="['/dashboard']"></i>
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Title" [(ngModel)]="title">
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+            <label for="description">DESCRIPTION:</label>
+            <app-ngx-editor [(ngModel)]="description" [config]="editorConfig" name="description" required></app-ngx-editor>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field>
+              <mat-select placeholder="Status" [(ngModel)]="status">
+                <mat-option value="backlog">BackLog</mat-option>
+                <mat-option value="in-progress">In Progress</mat-option>
+                <mat-option value="in-test">In Test</mat-option>
+                <mat-option value="done">Done</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <!-- <div class="form-group">
+          <label for="options1">SELECT ASSIGNEE:</label>
+          <select class="form-control" id="options1" [(ngModel)]="assignee">
+            <option *ngFor="let user of allUsers" [value]="user.userId">
+              <div>{{ user.firstName }} {{user.lastName}}</div>
+            </option>
+          </select>
+        </div> -->
+
+          <div class="form-group">
+            <mat-form-field>
+              <mat-select placeholder="Select Assignee" [(ngModel)]="assignee">
+                <ng-container *ngFor="let user of allUsers">
+                  <mat-option [value]="user.userId">{{ user.firstName }} {{user.lastName}}</mat-option>
+                </ng-container>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+            <label for="imageUpload">Select File:</label>
+            <input type="file" (change)="onFileSelected($event)" #fileInput style="display:none" />
+            <div>
+              <button (click)="fileInput.click()" type="button" class="btn btn-info" style="margin-left:1rem">Upload</button>
+              <button class="btn btn-success float-right" (click)="createIssueFn()">Create Issue</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-2 col-lg-2">
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- we do not use this-->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form [formGroup]="createIssue" (ngSubmit)="createIssueFn()">
+        <div class="form-group">
+          <label for="title">Title</label>
+            <input 
+              type="text"
+              id="title"
+              class="form-control"
+              formControlName="title"
+              [(ngModel)]="title">
+            <span 
+              class="help-block"
+              *ngIf="!createIssue.get('title').valid && createIssue.get('title').touched"
+              >Enter Valid Title
+            </span>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+            <angular-editor formControlName="description"></angular-editor>
+            <span 
+              class="help-block"
+              *ngIf="!createIssue.get('description').valid && createIssue.get('description').touched"
+              >Enter Description
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="status">Status:</label>
+            <select class="form-control" id="status" formControlName="status" aria-placeholder="" [(ngModel)]="status" required>
+              <option>BACKLOG</option>
+              <option>IN-PROGRESS</option>
+              <option>IN-TEST</option>
+              <option>DONE</option>
+            </select>
+            <span 
+            class="help-block"
+            *ngIf="!createIssue.get('status').valid && createIssue.get('status').touched"
+            >Select Status
+        </span>
+        </div>
+        <div class="form-group">
+          <label for="assingee">Assignee</label>
+          <select class="form-control" id="assignee" formControlName="assignee" [(ngModel)]="assignee" required>
+            <option *ngFor="let user of allUsers" [value]="user.userId">
+              <div>{{ user.firstName }} {{user.lastName}}</div>
+            </option>
+          </select>
+        </div>
+        <span *ngIf="!createIssue.valid && createIssue.touched" class="help-block">Please Complete Form</span>
+        <button class="btn btn-primary" type="submit" [disabled]="!createIssue.valid">Create Issue</button>
+      </form>
+    </div>
+  </div>
+</div> -->
