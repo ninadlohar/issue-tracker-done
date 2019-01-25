@@ -12,3 +12,6 @@
 
 ### Steps to install and run locally
 1. Clone the repo link -> [https://github.com/ninadlohar/issue-tracker-done.git](https://github.com/ninadlohar/issue-tracker-done.git)
+> Make a folder -> using cmd/bash -> enter command 'git init'
+> git remote add origin https://github.com/ninadlohar/issue-tracker-done.git
+> git pull origin master
