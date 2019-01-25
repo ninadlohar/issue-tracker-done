@@ -13,7 +13,7 @@
 - Git(if cloning project)
 
 ### Steps to install and run locally
-1. Clone the repo link -> [https://github.com/ninadlohar/issue-tracker-done.git](https://github.com/ninadlohar/issue-tracker-done.git)
+**1. Clone the repo link ->** [https://github.com/ninadlohar/issue-tracker-done.git](https://github.com/ninadlohar/issue-tracker-done.git)
 ````html
 > Make a folder -> using cmd/bash -> enter command 'git init'
 ````
@@ -23,7 +23,7 @@
 ````html
 > git pull origin master
 ````
-2. Install
+**2. Install**
 ````html
 > navigate to frontend folder -> enter command 'npm i' -> next command -> 'ng serve'
 ````
