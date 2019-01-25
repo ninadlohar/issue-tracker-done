@@ -42,3 +42,5 @@ User as well as Reporter can comment on the issue, and can also change the descr
 Live updates of issue and comment is rendered.
 A notification(as a toast) when clicked redirects to the issue.
 ```
+
+### Live version of project is hosted, [click here](http://kovacs-issue-tracker.online/)
