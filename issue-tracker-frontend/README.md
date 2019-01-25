@@ -33,4 +33,12 @@
 **3. Open browser and enter the url:-** [http://localhost:4200](http://localhost:4200)
 
 ### Problem Statement:-
-[Link of Problem Statement of the Projecy](https://s3-ap-southeast-1.amazonaws.com/edwisor-india-bucket/projects/web/web03/Web030103-Issue-Tracking-Tool.pdf)
+[Link of Problem Statement of the Project](https://s3-ap-southeast-1.amazonaws.com/edwisor-india-bucket/projects/web/web03/Web030103-Issue-Tracking-Tool.pdf)
+
+### Short Description of Project
+```
+Issue Tracking Tool, in which a user can log a issue/complain(as a reporter) for a user(who is assignee) with priority.
+User as well as Reporter can comment on the issue, and can also change the description,assignee,title and screenshot for the issue.
+Live updates of issue and comment is rendered.
+A notification(as a toast) when clicked redirects to the issue.
+```
