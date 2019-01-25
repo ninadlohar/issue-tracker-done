@@ -9,3 +9,6 @@
 ###### Prerequisites
 - MongoDB
 - Node.js
+
+### Steps to install and run locally
+1. Clone the repo link -> [https://github.com/ninadlohar/issue-tracker-done.git](https://github.com/ninadlohar/issue-tracker-done.git)
