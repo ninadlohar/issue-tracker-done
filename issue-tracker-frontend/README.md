@@ -44,3 +44,5 @@ A notification(as a toast) when clicked redirects to the issue.
 ```
 
 ### Live version of project is hosted, [click here](http://kovacs-issue-tracker.online/)
+
+![Screenshot](https://github.com/ninadlohar/issue-tracker-done/blob/master/issue-tracker-frontend/src/assets/login.png)
