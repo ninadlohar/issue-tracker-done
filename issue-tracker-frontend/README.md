@@ -62,3 +62,5 @@ A notification(as a toast) when clicked redirects to the issue.
 ### Create/Update Issue
 
 ![Screenshot](https://github.com/ninadlohar/issue-tracker-done/blob/master/issue-tracker-frontend/src/assets/upadte%20Issue.png)
+
+[Link To My LinkedIn Repo](https://www.linkedin.com/in/ninad-lohar-448705ab/)
