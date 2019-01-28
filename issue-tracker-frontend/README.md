@@ -63,4 +63,4 @@ A notification(as a toast) when clicked redirects to the issue.
 
 ![Screenshot](https://github.com/ninadlohar/issue-tracker-done/blob/master/issue-tracker-frontend/src/assets/upadte%20Issue.png)
 
-**1. My LinkedIn Profile->** [click here](https://www.linkedin.com/in/ninad-lohar-448705ab/)
+**My LinkedIn Profile->** [click here](https://www.linkedin.com/in/ninad-lohar-448705ab/)
